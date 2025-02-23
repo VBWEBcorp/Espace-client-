@@ -1,0 +1,39 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "server.js",
+            "use": "@vercel/node"
+        },
+        {
+            "src": "public/**",
+            "use": "@vercel/static"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/",
+            "dest": "/public/index.html"
+        },
+        {
+            "src": "/site-internet",
+            "dest": "/public/site-internet.html"
+        },
+        {
+            "src": "/referencement",
+            "dest": "/public/referencement.html"
+        },
+        {
+            "src": "/outils-sur-mesure",
+            "dest": "/public/outils-sur-mesure.html"
+        },
+        {
+            "src": "/videos",
+            "dest": "/public/videos.html"
+        },
+        {
+            "src": "/(.+)",
+            "dest": "/public/$1"
+        }
+    ]
+}
