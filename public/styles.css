@@ -1418,3 +1418,110 @@ header p {
         text-align: center !important;
     }
 }
+
+/* Responsive Design Global */
+@media (max-width: 768px) {
+    .content {
+        padding: 1rem;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    .card, .example-item, .feature-item {
+        margin: 1rem 0.5rem;
+        padding: 1.5rem 1rem;
+    }
+
+    /* Page Site Internet Mobile */
+    .service-details {
+        padding: 1rem 0.5rem;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin: 1rem 0.5rem;
+    }
+
+    .benefit-section {
+        margin: 2rem 0.5rem;
+    }
+
+    /* Page Référencement Mobile */
+    .seo-features {
+        padding: 1rem 0.5rem;
+    }
+
+    .example-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin: 1rem 0.5rem;
+    }
+
+    /* Page Outils Mobile */
+    .example-grid {
+        padding: 0 0.5rem;
+    }
+
+    /* Ajustements textes sur mobile */
+    h1, h2, h3, h4 {
+        font-size: 90%;
+        margin: 0.5rem 0;
+    }
+
+    p {
+        font-size: 95%;
+        margin: 0.5rem 0;
+    }
+
+    /* Ajustements boutons sur mobile */
+    .btn {
+        padding: 0.8rem 1.5rem;
+        margin: 1rem auto;
+        display: inline-block;
+    }
+
+    /* Header ajustements */
+    .page-header {
+        padding: 1rem 0.5rem;
+    }
+
+    /* Ajustements des cartes hero */
+    .hero-card {
+        margin: 1rem 0.5rem;
+        padding: 1.5rem 1rem;
+    }
+}
+
+/* Tablettes */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .content {
+        padding: 1.5rem;
+    }
+
+    .card, .example-item, .feature-item {
+        margin: 1rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .feature-grid, .example-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        margin: 1.5rem 1rem;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+    .content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .feature-grid, .example-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin: 2rem 0;
+    }
+}
