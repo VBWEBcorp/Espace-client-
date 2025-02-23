@@ -22,6 +22,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Gestion du menu burger sur mobile
+    let lastScrollTop = 0;
+    const delta = 5;
+
+    window.addEventListener('scroll', () => {
+        if (window.innerWidth <= 768) { // Seulement sur mobile
+            const st = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // Vérifie si l'utilisateur a scrollé plus que delta
+            if (Math.abs(lastScrollTop - st) <= delta) return;
+            
+            if (st > lastScrollTop) {
+                // Scroll vers le bas
+                burgerMenu.style.transform = 'translateY(-100%)';
+                burgerMenu.style.opacity = '0';
+            } else {
+                // Scroll vers le haut
+                burgerMenu.style.transform = 'translateY(0)';
+                burgerMenu.style.opacity = '1';
+            }
+            
+            lastScrollTop = st <= 0 ? 0 : st;
+        }
+    }, false);
+
     // Animation des cartes au scroll
     const cards = document.querySelectorAll('.card');
     
