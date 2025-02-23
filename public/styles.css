@@ -355,7 +355,7 @@ header p {
 
 @media (max-width: 768px) {
     .container {
-        padding: 1rem;
+        padding: 1rem 1.5rem;
     }
     
     .cards-grid {
@@ -397,6 +397,65 @@ header p {
         height: 25px;
         position: relative;
         margin: 10px;
+    }
+    
+    .service-details {
+        padding: 1rem 1.5rem;
+    }
+    
+    .feature-grid {
+        padding: 1rem 1.5rem;
+        gap: 2rem;
+    }
+    
+    .examples-grid {
+        padding: 1rem 1.5rem;
+        gap: 2rem;
+    }
+    
+    .cta-section {
+        padding: 2rem 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    .video-section {
+        padding: 1rem 1.5rem;
+    }
+    
+    .feature-item, .example-item {
+        margin: 1rem 0;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+        margin: 2rem 2rem 1.5rem 2rem;
+        line-height: 1.3;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        margin: 2rem 2rem 1.5rem 2rem;
+        line-height: 1.3;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        margin: 1.5rem 2rem 1rem 2rem;
+        line-height: 1.3;
+    }
+
+    .service-details > p {
+        margin: 1rem 2rem;
+        line-height: 1.6;
+    }
+
+    .header-subtitle {
+        margin: 1rem 2rem;
+        line-height: 1.5;
+    }
+
+    .page-header {
+        padding: 2rem 2rem 1rem 2rem;
     }
 }
 
@@ -528,30 +587,118 @@ header p {
     }
 }
 
+/* Styles communs pour les en-têtes */
+.page-header {
+    padding: 2rem;
+    text-align: left;
+}
+
+.header-title {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin: 0;
+    padding-left: 0;
+    text-align: left;
+}
+
+.header-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin: 0.5rem 0;
+    padding-left: 0;
+    text-align: left;
+}
+
+.service-details {
+    padding: 2rem;
+    text-align: left;
+}
+
+.service-details h1 {
+    font-size: 2.5rem;
+    margin: 0 0 1rem 0;
+    padding-left: 0;
+    text-align: left;
+}
+
+.service-details p {
+    font-size: 1.1rem;
+    margin: 0 0 2rem 0;
+    padding-left: 0;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        padding: 1.5rem;
+    }
+
+    .service-details {
+        padding: 1.5rem;
+    }
+
+    .header-title, 
+    .service-details h1 {
+        font-size: 2.2rem;
+        margin: 0 0 1rem 0;
+        padding-left: 0;
+    }
+
+    .header-subtitle,
+    .service-details p {
+        font-size: 1.1rem;
+        margin: 0.5rem 0;
+        padding-left: 0;
+    }
+}
+
 /* Styles des features */
 .feature-list {
     list-style: none;
     padding: 0;
-    margin: 1rem 0 0 0;
-    text-align: left;
+    margin: 1rem 0;
 }
 
 .feature-list li {
-    margin: 0.5rem 0;
-    padding-left: 1.5rem;
     position: relative;
-    font-size: 0.9rem;
-    opacity: 0.9;
+    padding-left: 1.8rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
 }
 
 .feature-list li::before {
-    content: '→';
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
     position: absolute;
     left: 0;
     color: var(--accent-color);
+    opacity: 0.9;
 }
 
-/* Styles des sections d'audit */
+.benefit-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.benefit-section li {
+    position: relative;
+    padding-left: 1.8rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.benefit-section li::before {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    opacity: 0.9;
+}
+
 .audit-details {
     margin: 4rem 0;
     padding: 2rem;
