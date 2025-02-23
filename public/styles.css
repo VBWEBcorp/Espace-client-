@@ -116,6 +116,66 @@ header p {
     opacity: 0.9;
 }
 
+.card-subtitle {
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.features-section .card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.features-section .card h2 {
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.features-section .card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.features-section .card .btn {
+    margin: 1rem auto;
+    display: inline-block;
+}
+
+.features-section .card .response-time {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.features-section .card ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.features-section .card ul li {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.features-section .card ul li i {
+    color: var(--accent);
+}
+
 .btn {
     display: inline-block;
     background: var(--accent-color);
@@ -882,26 +942,33 @@ header p {
 
 /* Styles pour la page Outils sur Mesure */
 .hero-section {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
-    padding: 3rem;
-    margin: 2rem 0;
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: var(--primary-dark);
+    color: white;
+}
+
+.hero-section h1 {
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
     text-align: center;
 }
 
-.hero-text {
+.hero-section p {
     font-size: 1.2rem;
-    line-height: 1.6;
     margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
-.hero-highlight {
-    background: var(--accent-color);
-    color: var(--bg-color);
-    padding: 2rem;
-    border-radius: 8px;
-    font-size: 1.3rem;
-    font-weight: 500;
+.hero-section .response-time {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-top: 2rem;
+    text-align: center;
 }
 
 .benefits-grid {
@@ -967,6 +1034,15 @@ header p {
 .example-item h4 {
     color: var(--accent-color);
     margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.example-item p {
+    text-align: center;
+    color: var(--text-light);
+    margin: 0;
+    width: 100%;
+    display: block;
 }
 
 @media (max-width: 1024px) {
@@ -1111,5 +1187,45 @@ header p {
     .cards-grid {
         grid-template-columns: 1fr;
         padding: 1rem;
+    }
+}
+
+.hero-card {
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+}
+
+.hero-card h2 {
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.hero-card p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.hero-card .btn {
+    margin: 1rem auto;
+    display: inline-block;
+}
+
+.hero-card .response-time {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .hero-card {
+        margin: 1rem;
+        padding: 1.5rem;
     }
 }
