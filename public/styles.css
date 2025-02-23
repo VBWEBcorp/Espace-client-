@@ -89,6 +89,47 @@ header p {
     }
 }
 
+.card, .example-item, .feature-item {
+    text-align: center !important;
+}
+
+.card h2, .card h3, .card h4,
+.example-item h2, .example-item h3, .example-item h4,
+.feature-item h2, .feature-item h3, .feature-item h4 {
+    text-align: center !important;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.card p, .example-item p, .feature-item p {
+    text-align: center !important;
+    width: 100%;
+    margin: 0.5rem 0;
+}
+
+.card i, .example-item i, .feature-item i {
+    display: block;
+    text-align: center;
+    margin: 0 auto 1rem auto;
+}
+
+.card ul, .example-item ul, .feature-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.card ul li, .example-item ul li, .feature-item ul li {
+    text-align: center !important;
+    margin: 0.5rem 0;
+}
+
+.card .btn, .example-item .btn, .feature-item .btn {
+    display: inline-block;
+    margin: 1rem auto;
+}
+
 .card {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid var(--card-border);
@@ -563,87 +604,98 @@ header p {
 }
 
 .service-details {
-    padding: 3rem 0;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.service-details h1 {
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+
+.service-details p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
 }
 
 .feature-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    margin: 3rem 0;
+    margin: 2rem 0;
 }
 
 .feature-item {
     background: rgba(255, 255, 255, 0.05);
-    padding: 2rem;
     border-radius: 12px;
+    padding: 2rem;
     text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.feature-item:hover {
-    transform: translateY(-5px);
 }
 
 .feature-item i {
-    font-size: 2.5rem;
-    color: var(--accent-color);
+    font-size: 2rem;
+    color: var(--accent);
     margin-bottom: 1rem;
+    display: block;
 }
 
 .feature-item h3 {
+    color: white;
     margin-bottom: 1rem;
+    font-size: 1.3rem;
 }
 
-.cta-section {
-    text-align: center;
-    padding: 4rem 0;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
+.feature-item p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.benefit-section {
     margin: 3rem 0;
+    text-align: center;
 }
 
-.cta-section h2 {
+.benefit-section h2 {
+    color: var(--accent);
+    margin-bottom: 2rem;
     font-size: 2rem;
-    margin-bottom: 1rem;
-    color: var(--accent-color);
 }
 
-.cta-section p {
-    max-width: 600px;
-    margin: 0 auto 2rem;
-    opacity: 0.9;
+.benefit-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.btn-large {
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
+.benefit-section ul li {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
-.side-menu a.active {
-    background: var(--accent-color);
-    color: var(--text-color);
-}
-
-.side-menu a.active:hover {
-    background: #3da8d8;
+.benefit-section ul li i {
+    color: var(--accent);
 }
 
 @media (max-width: 768px) {
-    .page-header {
-        padding: 2rem 0;
-    }
-
-    .page-header h1 {
-        font-size: 2rem;
-    }
-
     .feature-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
-    .cta-section {
-        padding: 2rem;
+    .feature-item {
+        padding: 1.5rem;
+    }
+
+    .service-details {
+        padding: 1rem;
     }
 }
 
@@ -1099,6 +1151,10 @@ header p {
     width: 100%;
     padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
     margin-bottom: 1.5rem;
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .video-container iframe {
@@ -1227,5 +1283,138 @@ header p {
     .hero-card {
         margin: 1rem;
         padding: 1.5rem;
+    }
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.example-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.example-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.example-item i {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.example-item h4 {
+    color: white;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.example-item p {
+    color: var(--text-light);
+    margin: 0;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .example-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .example-item {
+        padding: 1.5rem;
+    }
+}
+
+/* Page Site Internet */
+.service-details .feature-item {
+    text-align: center !important;
+}
+
+.service-details .feature-item i {
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+
+.service-details .feature-item h3,
+.service-details .feature-item p {
+    text-align: center !important;
+    width: 100%;
+}
+
+.service-details .benefit-section {
+    text-align: center !important;
+}
+
+.service-details .benefit-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-details .benefit-section ul li {
+    text-align: center !important;
+    display: block;
+    margin: 0.5rem 0;
+}
+
+/* Page Référencement */
+.seo-features .feature-item {
+    text-align: center !important;
+}
+
+.seo-features .feature-item i {
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+
+.seo-features .feature-item h3,
+.seo-features .feature-item p {
+    text-align: center !important;
+    width: 100%;
+}
+
+/* Page Outils */
+.example-grid .example-item {
+    text-align: center !important;
+}
+
+.example-grid .example-item i {
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+
+.example-grid .example-item h4,
+.example-grid .example-item p {
+    text-align: center !important;
+    width: 100%;
+}
+
+/* Style pour les boutons dans toutes les cartes */
+.card .btn,
+.feature-item .btn,
+.example-item .btn {
+    display: inline-block;
+    margin: 1rem auto;
+}
+
+/* Forcer le centrage sur mobile */
+@media (max-width: 768px) {
+    .card, .feature-item, .example-item,
+    .card h2, .card h3, .card h4, .card p,
+    .feature-item h2, .feature-item h3, .feature-item h4, .feature-item p,
+    .example-item h2, .example-item h3, .example-item h4, .example-item p,
+    .benefit-section ul li {
+        text-align: center !important;
     }
 }
